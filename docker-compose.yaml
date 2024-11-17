@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: .  # Use the current directory as the build context
+    container_name: ui-container
+    ports:
+      - "3000:3000"  # Expose port 8000 for the application
+    volumes:
+      - ./storage:/app/storage  # Mount storage directory on the host to the container
